@@ -4,7 +4,6 @@
   --cream: #f5f2f0;
   --sage: #8da09c;
   --sage-light: #b8c5c2;
-  --accent-sky: #6bb8c9;
   --bg: #f0ebe6;
   --text: #0a2012;
   --text-muted: #3d4a42;
@@ -35,7 +34,7 @@ header {
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .site-title {
@@ -92,7 +91,7 @@ header {
 
 nav {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: auto auto 0;
   background: rgba(245, 242, 240, 0.12);
   border: 1px solid rgba(245, 242, 240, 0.2);
   border-radius: 10px;
