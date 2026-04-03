@@ -1,10 +1,17 @@
 :root {
-  --primary: #0b5c8e;
-  --secondary: #2aa6a2;
-  --accent: #f4a261;
-  --bg: #f5fbff;
-  --text: #153043;
-  --card: #ffffff;
+  --forest: #0a2012;
+  --forest-mid: #143524;
+  --cream: #f5f2f0;
+  --sage: #8da09c;
+  --sage-light: #b8c5c2;
+  --accent-sky: #6bb8c9;
+  --bg: #f0ebe6;
+  --text: #0a2012;
+  --text-muted: #3d4a42;
+  --card: #fffcfa;
+  --primary: var(--forest);
+  --secondary: var(--sage);
+  --accent: var(--accent-sky);
 }
 
 * {
@@ -20,29 +27,74 @@ body {
 }
 
 header {
-  background: linear-gradient(120deg, var(--primary), var(--secondary));
-  color: #fff;
-  padding: 2rem 1rem 1.25rem;
+  background:
+    linear-gradient(180deg, rgba(10, 32, 18, 0.9), rgba(10, 32, 18, 0.9)),
+    url("images/banner.png") center top / cover no-repeat;
+  color: var(--cream);
+  padding: 5rem 1rem 4rem;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .site-title {
   max-width: 1000px;
   margin: 0 auto 1rem;
+  text-align: center;
 }
 
-.site-title h1 {
+.site-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-brand-copy {
+  text-align: center;
+}
+
+.site-brand:hover .site-brand-copy h1,
+.site-brand:focus-visible .site-brand-copy h1 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.site-brand:focus-visible {
+  outline: 2px solid var(--accent-sky);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.site-logo {
+  width: 76px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.site-brand-copy h1 {
   margin: 0;
   font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-.site-title p {
+.site-brand-copy p {
   margin: 0.35rem 0 0;
+  opacity: 0.92;
+  font-size: 0.98rem;
 }
 
 nav {
   max-width: 1000px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(245, 242, 240, 0.12);
+  border: 1px solid rgba(245, 242, 240, 0.2);
   border-radius: 10px;
   padding: 0.5rem;
 }
@@ -59,7 +111,7 @@ nav ul {
 nav a {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: var(--cream);
   font-weight: 600;
   padding: 0.55rem 0.9rem;
   border-radius: 8px;
@@ -68,7 +120,7 @@ nav a {
 nav a:hover,
 nav a:focus,
 nav a.active {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(245, 242, 240, 0.22);
 }
 
 main {
@@ -81,7 +133,8 @@ main {
   background: var(--card);
   border-radius: 12px;
   padding: 1.25rem;
-  box-shadow: 0 6px 18px rgba(11, 92, 142, 0.1);
+  box-shadow: 0 6px 18px rgba(10, 32, 18, 0.08);
+  border: 1px solid rgba(141, 160, 156, 0.25);
   margin-bottom: 1rem;
 }
 
@@ -91,14 +144,47 @@ main {
   gap: 1rem;
 }
 
+.photo-gallery {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.photo-card {
+  margin: 0;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(10, 32, 18, 0.1);
+  border: 1px solid rgba(141, 160, 156, 0.3);
+}
+
+.photo-card img {
+  width: 100%;
+  height: min(280px, 42vw);
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .photo-card img {
+    height: 240px;
+  }
+}
+
+.photo-caption {
+  padding: 0.65rem 0.9rem 0.85rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
 .photo {
-  background: #eaf4fb;
-  border: 2px dashed #9ac2db;
+  background: rgba(141, 160, 156, 0.15);
+  border: 2px dashed var(--sage);
   border-radius: 10px;
   padding: 2rem 1rem;
   text-align: center;
   font-weight: 700;
-  color: #24597a;
+  color: var(--forest-mid);
 }
 
 table {
@@ -108,23 +194,29 @@ table {
 
 th,
 td {
-  border-bottom: 1px solid #d6e8f2;
+  border-bottom: 1px solid rgba(141, 160, 156, 0.45);
   padding: 0.7rem;
   text-align: left;
 }
 
 th {
-  background: #edf7fc;
+  background: rgba(141, 160, 156, 0.18);
+  color: var(--text);
 }
 
 footer {
   text-align: center;
   padding: 1.25rem 1rem 2rem;
-  color: #446177;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 @media (max-width: 640px) {
-  .site-title h1 {
-    font-size: 1.6rem;
+  .site-brand-copy h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-logo {
+    width: 64px;
   }
 }

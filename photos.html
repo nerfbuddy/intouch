@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InTouch Camp | Photos</title>
+    <title>Camp InTouch | Photos</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div class="site-title">
-        <h1>InTouch Camp</h1>
-        <p>Memories from our outdoor camp community.</p>
+        <a class="site-brand" href="index.html">
+          <div class="site-brand-copy">
+              <h1>Camp InTouch</h1>
+            <p>Memories from our outdoor camp community.</p>
+            <p>DISCLAIMER: These photos are of similar camps our staff member Drew Collins has worked in. They are not actual photos of the camp.</p>
+          </div>
+        </a>
       </div>
       <nav aria-label="Main navigation">
         <ul>
@@ -26,18 +31,85 @@
       <section class="card">
         <h2>Camp Photo Gallery</h2>
         <p>
-          Add your favorite InTouch photos to this page to share camp moments
-          with families and future campers.
+          Moments from games on the lawn, messy adventures, team spirit, and
+          friendships at Camp InTouch.
         </p>
       </section>
 
-      <section class="grid">
-        <div class="photo">Photo Placeholder 1</div>
-        <div class="photo">Photo Placeholder 2</div>
-        <div class="photo">Photo Placeholder 3</div>
-        <div class="photo">Photo Placeholder 4</div>
-        <div class="photo">Photo Placeholder 5</div>
-        <div class="photo">Photo Placeholder 6</div>
+      <section
+        class="grid photo-gallery"
+        aria-label="Camp InTouch photo gallery"
+      >
+        <figure class="photo-card">
+          <img
+            src="images/photo-field-fun.png"
+            alt="Counselor and camper laughing together on a bright green field"
+            width="900"
+            height="1200"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">Games on the grass</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="images/photo-foam-party.png"
+            alt="Camper cheering with arms raised in a foam party"
+            width="900"
+            height="1200"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">Foam party energy</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="images/photo-muddy-adventure.png"
+            alt="Group of campers and a counselor covered in mud, smiling in a grassy field"
+            width="1200"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">Muddy adventure day</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="images/photo-stage-spirit.png"
+            alt="Counselors on an outdoor stage with campers in the background"
+            width="1200"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">Spirit on stage</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="images/photo-shoulders-smiles.png"
+            alt="Camper riding on a counselor’s shoulders, both smiling"
+            width="900"
+            height="1200"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">Shoulders and smiles</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="images/photo-team-bandanas.png"
+            alt="Large group of campers in matching red bandanas on a green field"
+            width="1200"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">Team photo</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="images/photo-group-trail.png"
+            alt="Group of boys in camp shirts on a wooded trail with their counselor"
+            width="1200"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption class="photo-caption">Cabin group on the trail</figcaption>
+        </figure>
       </section>
     </main>
 
